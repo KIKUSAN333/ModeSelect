@@ -29,21 +29,19 @@ public class MusicSelect : MonoBehaviour
     public void RightButtonPush()
     {
         Debug.Log("RightButtonPush");
-        if (SelectMusicNumber < DataBase.MusicData.Length - 1)//データベースの要素の個数を超えないようにする
-        {
-            SelectMusicNumber++;
-            MusicUpdata();
-        }
+ 
+        SelectMusicNumber = (SelectMusicNumber + 1) % (DataBase.MusicData.Length);
+        MusicUpdata();
+        
     }
 
     public void LeftButtonPush()
     {
         Debug.Log("LeftButtonPush");
-        if (SelectMusicNumber > 0)
-        {
-            SelectMusicNumber--;
-            MusicUpdata();
-        }
+
+        SelectMusicNumber = (SelectMusicNumber - 1 + DataBase.MusicData.Length) % (DataBase.MusicData.Length);
+        MusicUpdata();
+        
     }
 
 
