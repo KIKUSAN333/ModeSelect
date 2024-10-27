@@ -529,7 +529,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761760852}
+      - m_Target: {fileID: 761760855}
         m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
         m_MethodName: ChoiceMusic
         m_Mode: 1
@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 761760853}
   - component: {fileID: 761760852}
   - component: {fileID: 761760854}
+  - component: {fileID: 761760855}
   m_Layer: 0
   m_Name: MusicSelectManager
   m_TagString: Untagged
@@ -571,10 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e444bcd33a309c74fa83a9c92f478b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataBase: {fileID: 11400000, guid: faab064966f4a3a42a45b266bceef973, type: 2}
-  MusicNameText: {fileID: 206588339}
-  MusicLevelText: {fileID: 1837363477}
-  MusicImage: {fileID: 491018622}
 --- !u!4 &761760853
 Transform:
   m_ObjectHideFlags: 0
@@ -686,6 +683,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &761760855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761760851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e9da47273db24489207ddf35e86033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataBase: {fileID: 11400000, guid: faab064966f4a3a42a45b266bceef973, type: 2}
+  MusicNameText: {fileID: 206588339}
+  MusicLevelText: {fileID: 1837363477}
+  MusicImage: {fileID: 491018622}
 --- !u!1 &922489559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761760852}
+      - m_Target: {fileID: 761760855}
         m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
         m_MethodName: LeftButtonPush
         m_Mode: 1
@@ -1147,7 +1160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761760852}
+      - m_Target: {fileID: 761760855}
         m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
         m_MethodName: RightButtonPush
         m_Mode: 1

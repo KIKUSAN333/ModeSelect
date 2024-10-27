@@ -14,6 +14,9 @@ public class holdNotes : MonoBehaviour
 
     bool Hold = false;
 
+    [SerializeField]
+    private SoundManager soundManager; //サウンドマネージャー
+
     void Start()
     {
         // RectTransform コンポーネントを取得
@@ -69,7 +72,7 @@ public class holdNotes : MonoBehaviour
 
         holdPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
-
+        soundManager.Play("HoldGreatSE");
 
 
         if (holdPosition < 0)
@@ -90,7 +93,7 @@ public class holdNotes : MonoBehaviour
 
         holdPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
-
+        soundManager.Play("MissSE");
         
 
         if (holdPosition < 0)

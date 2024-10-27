@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pushNotes : MonoBehaviour
+public class pushNotes_Upper : MonoBehaviour
 {
     float moveSpeed = 5.0f; // クラス内に変数を定義
     public float pushPosition;
@@ -63,6 +63,7 @@ public class pushNotes : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("GreatSE");
 
         Destroy(this.gameObject);//ノーツ削除
 
@@ -82,6 +83,7 @@ public class pushNotes : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("GoodSE");
 
         Destroy(this.gameObject);//ノーツ削除
 
@@ -101,6 +103,7 @@ public class pushNotes : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("MissSE");
 
         Destroy(this.gameObject);//ノーツ削除
 

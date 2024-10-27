@@ -13,6 +13,9 @@ public class pushNotes_Lower : MonoBehaviour
     public static int pushLowerCount_Good = 0;
     public static int pushLowerCount_Miss = 0;
 
+    [SerializeField]
+    private SoundManager soundManager; //サウンドマネージャー
+
     void Start()
     {
         // RectTransform コンポーネントを取得
@@ -60,6 +63,7 @@ public class pushNotes_Lower : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("GreatSE");
 
         Destroy(this.gameObject);//ノーツ削除
 
@@ -79,6 +83,7 @@ public class pushNotes_Lower : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("GoodSE");
 
         Destroy(this.gameObject);//ノーツ削除
 
@@ -98,6 +103,7 @@ public class pushNotes_Lower : MonoBehaviour
 
         pushPosition = transform.position.x;
         // ここでエフェクトを出す(音及び画面)
+        soundManager.Play("MissSE");
 
         Destroy(this.gameObject);//ノーツ削除
 

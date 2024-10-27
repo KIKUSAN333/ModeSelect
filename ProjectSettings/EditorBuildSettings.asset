@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Music_1.unity
     guid: 57bb89ea1da409548914f91593e003a4
+  - enabled: 1
+    path: Assets/Scenes/GameCreditScene.unity
+    guid: 45df44c618abfa4438d3b89482144930
   m_configObjects: {}
