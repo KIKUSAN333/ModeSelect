@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 759, y: -464}
-  m_SizeDelta: {x: 350, y: 100}
+  m_AnchoredPosition: {x: 830, y: -480}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &99099285
 CanvasGroup:
@@ -403,11 +403,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 200
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -470,8 +470,9 @@ GameObject:
   - component: {fileID: 922302244}
   - component: {fileID: 922302246}
   - component: {fileID: 922302245}
+  - component: {fileID: 922302247}
   m_Layer: 5
-  m_Name: Title
+  m_Name: GameCredit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,17 +485,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922302243}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1670821094}
+  m_Father: {fileID: 1393538939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 250}
+  m_AnchoredPosition: {x: 0, y: -2540}
+  m_SizeDelta: {x: 1920, y: 4000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922302245
 MonoBehaviour:
@@ -509,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -518,18 +519,20 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 150
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 150
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MUSIC GAME
+  m_Text: "<size=150> Game Credit</size>\n\n\n\n\u697D\u66F2\n\n\u300C\u9B3C\u59EB\u300D\nM-ART\n\n\u300CLe
+    Cirque du Diable\u300D\n\u306A\u3050\u3082\u308A\u305A\u306E\u97F3\u697D\u5BA4\n\n\n\u753B\u50CF\n\nICOON
+    MONO\n\n\n\u52B9\u679C\u97F3\n\n\u52B9\u679C\u97F3\u30E9\u30DC\n\u9B54\u738B\u9B42\n\n\n\n\n\n\n\n\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u30DE\u30CD\u30FC\u30B8\u30E3\u30FC\n\n\u30AD\u30AF\n\n\n\u4F01\u753B\n\n\u3086\u3093\u3086\u3093\n\u30AD\u30AF\n\u30BB\u30AD\n\n\n\u30B9\u30AF\u30EA\u30D7\u30C8\n\nNagi\n\u3086\u3093\u3086\u3093\n\u30AD\u30AF\n\n\n\u30C7\u30B6\u30A4\u30F3\n\nk2311079\n\u30AD\u30AF\n\n\n\u8B5C\u9762\n\n\u30BB\u30AD\n\n\n\n\n\n\n\n\n<size=150>G^2</size>\n\n\n\n\n"
 --- !u!222 &922302246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -538,6 +541,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922302243}
   m_CullTransparentMesh: 1
+--- !u!114 &922302247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922302243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010cd03f163c1bd479e37830e66f56e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1393538938
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +583,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 922302244}
   - {fileID: 99099284}
   m_Father: {fileID: 741397016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -723,7 +739,6 @@ RectTransform:
   m_Children:
   - {fileID: 131860516}
   - {fileID: 741397016}
-  - {fileID: 922302244}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
