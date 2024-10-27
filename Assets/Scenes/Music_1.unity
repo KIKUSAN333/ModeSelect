@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 316623266}
   - component: {fileID: 316623268}
   m_Layer: 5
-  m_Name: PushNotes_Upper (1)
+  m_Name: PushNotes_Upper (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 894458197}
   - component: {fileID: 894458199}
   m_Layer: 5
-  m_Name: PushNotes_Lower
+  m_Name: PushNotes_Lower (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 1018542332}
   - component: {fileID: 1018542331}
   m_Layer: 5
-  m_Name: PushNotes_Upper (3)
+  m_Name: PushNotes_Upper (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 1355243167}
   - component: {fileID: 1355243166}
   m_Layer: 5
-  m_Name: PushNotes_Lower (1)
+  m_Name: PushNotes_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1799,11 +1799,11 @@ RectTransform:
   - {fileID: 438686198}
   - {fileID: 186717647}
   - {fileID: 607605008}
-  - {fileID: 803645692}
   - {fileID: 1018542330}
+  - {fileID: 803645692}
   - {fileID: 316623264}
-  - {fileID: 894458195}
   - {fileID: 1355243165}
+  - {fileID: 894458195}
   - {fileID: 1486987758}
   - {fileID: 1374790424}
   - {fileID: 417104742}

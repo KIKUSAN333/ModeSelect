@@ -45,10 +45,12 @@ public class pushNotes_Lower : MonoBehaviour
         else if (Input.GetKey(KeyCode.K) && rectTransform.anchoredPosition.x <= -820)//早いミス
         {
             Miss();
+            Debug.Log(rectTransform.name +"   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_FastMiss");
         }
         else if (rectTransform.anchoredPosition.x <= - 900)//遅いミス
         {
             Miss();
+            Debug.Log(rectTransform.name + "   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_LateMiss");
         }
 
 
@@ -57,7 +59,7 @@ public class pushNotes_Lower : MonoBehaviour
     void OnClickButton_Great()
     {
 
-        Debug.Log("Push ,X Position: " + this.rectTransform.anchoredPosition.x + " Judgemnt_Great");
+        Debug.Log(rectTransform.name + "   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_Great");
 
         pushLowerCount_Great++;
 
@@ -77,7 +79,7 @@ public class pushNotes_Lower : MonoBehaviour
     void OnClickButton_Good()
     {
 
-        Debug.Log("Push ,X Position: " + this.rectTransform.anchoredPosition.x + " Judgemnt_Good");
+        Debug.Log(rectTransform.name + "   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_Good");
 
         pushLowerCount_Good++;
 
@@ -97,7 +99,7 @@ public class pushNotes_Lower : MonoBehaviour
     void Miss()
     {
 
-        Debug.Log("Push ,X Position: " + this.rectTransform.anchoredPosition.x + " Judgemnt_Miss");
+
 
         pushLowerCount_Miss++;
 

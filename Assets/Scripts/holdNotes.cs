@@ -49,14 +49,14 @@ public class holdNotes : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.F) && rectTransform.anchoredPosition.x <= -820 +(rectTransform.rect.width - 30) && !Hold)//早いミス
         {
-            Debug.Log("Fast_HoldMiss");
+            Debug.Log(rectTransform.name + "   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_FastHoldMiss");
             Hold = true;
             Miss();
         }
         else if (rectTransform.anchoredPosition.x <= -900 - (rectTransform.rect.width - 30))//遅いミスとノーツ消去
         {
             if (!Hold) {
-                Debug.Log("Late_HoldMiss");
+                Debug.Log(rectTransform.name + "   X Position: " + this.rectTransform.anchoredPosition.x + "   Judgement_LateHoldMiss");
                 Miss();
             }
             Destroy(this.gameObject);//ノーツ削除
