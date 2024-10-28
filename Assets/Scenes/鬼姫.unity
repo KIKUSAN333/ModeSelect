@@ -933,7 +933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1474, y: -20.5}
+  m_AnchoredPosition: {x: 1483, y: -10.5}
   m_SizeDelta: {x: 300, y: 737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157306078
@@ -1305,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312.1, y: 176.8}
+  m_AnchoredPosition: {x: -313, y: 176.25}
   m_SizeDelta: {x: 30, y: 363.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1549620279
@@ -1573,7 +1573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 698.59985, y: -10.499}
+  m_AnchoredPosition: {x: 707.99963, y: -10.499999}
   m_SizeDelta: {x: 90, y: 737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880786226
@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 2018147594}
   - component: {fileID: 2018147597}
   - component: {fileID: 2018147596}
-  - component: {fileID: 2018147595}
+  - component: {fileID: 2018147598}
   m_Layer: 5
   m_Name: PushNotes_Upper (3)
   m_TagString: Untagged
@@ -1751,20 +1751,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1181.6, y: 176.25}
   m_SizeDelta: {x: 30, y: 363.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2018147595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018147593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 402976ba23877d943871cf9f5806c2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushPosition: 0
-  soundManager: {fileID: 319073663}
 --- !u!114 &2018147596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,6 +1789,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018147593}
   m_CullTransparentMesh: 1
+--- !u!114 &2018147598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018147593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d376527e50caa044aab2c8ce90e5268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushPosition: 0
+  soundManager: {fileID: 319073663}
 --- !u!1 &2048016931
 GameObject:
   m_ObjectHideFlags: 0
