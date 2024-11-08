@@ -1,12 +1,10 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GManager : MonoBehaviour
 {
-    public static GManager instance = null;
-    private static GManager _instance = null;
+    public static GManager instance
     {
         get
         {
@@ -22,11 +20,12 @@ public class GManager : MonoBehaviour
             }
             return _instance;
         }
+    }
 
+    private static GManager _instance = null;
 
     public float maxScore;
     public float ratioScore;
-
 
     public int songID;  //曲のID
     public float notesSpeed;  //ノーツスピード
@@ -37,7 +36,6 @@ public class GManager : MonoBehaviour
     public int combo;  //現在のコンボ数を記録
     public int score;  //現在のスコアを記録
 
-
     //以下、それぞれの判定を記録
     public int perfect;
     public int great;
@@ -47,17 +45,24 @@ public class GManager : MonoBehaviour
     //このスクリプトがシーンに一つしかないようにしている
     public void Awake()
     {
-        if (instance == null)
+        
+        if (_instance == null)
         {
+            Debug.Log("GManager_test");
             _instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+        
         else
         {
+        
+            Debug.Log("GManager_Destroy");
             Destroy(this.gameObject);
         }
+       
     }
 }
+
 
 /*
 using System.Collections;

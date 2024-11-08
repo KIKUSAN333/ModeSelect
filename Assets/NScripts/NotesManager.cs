@@ -56,13 +56,13 @@ public class NotesManager : MonoBehaviour
         {
             float kankaku = 60 / (inputJson.BPM * (float)inputJson.notes[i].LPB);
             float beatSec = kankaku * (float)inputJson.notes[i].LPB;
-            float time = (beatSec * inputJson.notes[i].num / (float)inputJson.notes[i].LPB) + inputJson.offset * 0.01f;
-            NotesTime.Add(time);
+            float time = (beatSec * inputJson.notes[i].num / (float)inputJson.notes[i].LPB) + inputJson.offset + 0.01f;
+            NotesTime.Insert(i, time);
             LaneNum.Add(inputJson.notes[i].block);
             NoteType.Add(inputJson.notes[i].type);
-
+            Debug.Log(NotesTime[i]);
             float x = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3(x, (inputJson.notes[i].block)*1.73f - 2.65f, 0), Quaternion.identity));
+            NotesObj.Add(Instantiate(noteObj, new Vector3(x-3, (inputJson.notes[i].block)*1.73f - 2.65f, 0), Quaternion.identity));
         }
     }
 }

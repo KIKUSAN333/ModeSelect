@@ -13,10 +13,14 @@ public class Judge : MonoBehaviour
     AudioSource audio;
     [SerializeField] AudioClip hitSound;
 
+    private float lag = -1f;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
+
     }
+
     void Update()
     {
         if (GManager.instance.Start)
@@ -25,13 +29,13 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.LaneNum[0] == 0)//押されたボタンはレーンの番号とあっているか？
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)), 0);
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime) + lag), 0);
                 }
                 else
                 {
                     if (notesManager.LaneNum[1] == 0)
                     {
-                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime) + lag), 1);
                     }
                 }
             }
@@ -39,13 +43,13 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.LaneNum[0] == 1)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)), 0);
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime) + lag), 0);
                 }
                 else
                 {
                     if (notesManager.LaneNum[1] == 1)
                     {
-                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime) + lag), 1);
                     }
                 }
             }
@@ -53,13 +57,13 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.LaneNum[0] == 2)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)), 0);
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime) + lag), 0);
                 }
                 else
                 {
                     if (notesManager.LaneNum[1] == 2)
                     {
-                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime) + lag), 1);
                     }
                 }
             }
@@ -67,18 +71,18 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.LaneNum[0] == 3)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)), 0);
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime) + lag), 0);
                 }
                 else
                 {
                     if (notesManager.LaneNum[1] == 3)
                     {
-                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime) + lag), 1);
                     }
                 }
             }
 
-            if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+            if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime - lag)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
                 message(3);
                 deleteData(0);
@@ -92,7 +96,7 @@ public class Judge : MonoBehaviour
     void Judgement(float timeLag, int numOffset)
     {
         audio.PlayOneShot(hitSound);
-        if (timeLag <= 0.05)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
+        if (timeLag <= 0.3)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
         {
             Debug.Log("Perfect");
             message(0);
@@ -103,7 +107,7 @@ public class Judge : MonoBehaviour
         }
         else
         {
-            if (timeLag <= 0.08)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
+            if (timeLag <= 0.45 && 0.3 < timeLag)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
             {
                 Debug.Log("Great");
                 message(1);
@@ -114,7 +118,7 @@ public class Judge : MonoBehaviour
             }
             else
             {
-                if (timeLag <= 0.10)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
+                if (timeLag <= 0.6 && 0.45 < timeLag)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
                 {
                     Debug.Log("Bad");
                     message(2);
